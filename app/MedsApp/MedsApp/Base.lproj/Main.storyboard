@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="42e-Gc-VjZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--내 재료-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MyIngredient" customModule="MedsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="내 재료" id="KB5-Bz-1L7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726.0869565217392" y="-85.044642857142847"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dJr-kX-JrV">
+            <objects>
+                <viewController id="HeV-jV-12U" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YNr-Hc-hKR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="B2D-1C-ISP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="87k-O5-SaN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4e-AD-Tvo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2459" y="-97"/>
+        </scene>
+        <!--바코드-->
+        <scene sceneID="zXH-0q-vp0">
+            <objects>
+                <viewController id="FoV-Yd-yzu" customClass="Barcode" customModule="MedsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GeI-m3-zuA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pgI-LG-y7W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="바코드" image="camera.fill" catalog="system" id="Y2U-ap-j8P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wt5-io-FhF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1323" y="597"/>
+        </scene>
+        <!--설정-->
+        <scene sceneID="Bjq-7u-clI">
+            <objects>
+                <viewController id="97M-ak-xVS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VI6-u0-uny">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="X7q-8W-e2M"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="설정" image="bubble.middle.bottom.fill" catalog="system" id="8iX-86-MGs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3rB-1p-IOs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="943"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pBR-Hy-Lis">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="42e-Gc-VjZ" customClass="ViewController" customModule="MedsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K6o-QV-gCE">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BqF-iP-oZV" kind="relationship" relationship="viewControllers" id="Dup-6j-8ov"/>
+                        <segue destination="FoV-Yd-yzu" kind="relationship" relationship="viewControllers" id="hmj-W1-DSV"/>
+                        <segue destination="97M-ak-xVS" kind="relationship" relationship="viewControllers" id="RI2-oS-bB4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOh-HR-r7o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1280" y="575"/>
+        </scene>
+        <!--내 재료-->
+        <scene sceneID="DsL-mk-ie4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BqF-iP-oZV" customClass="MyIngredientController" customModule="MedsApp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="내 재료" image="person" catalog="system" id="Hgx-dp-fx3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b8V-3I-dVM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mUh-Zm-YlB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUM-ua-fbG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="399" y="-327"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bubble.middle.bottom.fill" catalog="system" width="128" height="110"/>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
