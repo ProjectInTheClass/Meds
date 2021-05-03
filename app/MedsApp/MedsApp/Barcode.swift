@@ -10,6 +10,7 @@ import AVFoundation
 
 class Barcode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
+    @IBOutlet var topbar: UIView!
     
     var captureSession = AVCaptureSession()
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -71,8 +72,12 @@ guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
        captureSession.startRunning()
 
         // Move the message label and top bar to the front
-        view.bringSubview(toFront: messageLabel)
-        view.bringSubview(toFront: topbar)
+//        view.bringSubview(toFront: messageLabel)
+        topbar.layer.borderColor = UIColor.black.cgColor
+        topbar.layer.borderWidth = 2
+        view.bringSubviewToFront( topbar)
+    
+//        topbar.backgroundColor = UIColor(
         // Initialize QR Code Frame to highlight the QR code
         qrCodeFrameView = UIView()
         
@@ -80,7 +85,7 @@ guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
             qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
             qrCodeFrameView.layer.borderWidth = 2
             view.addSubview(qrCodeFrameView)
-            view.bringSubview(toFront: qrCodeFrameView)
+            view.bringSubviewToFront(qrCodeFrameView)
         }
     
 }
@@ -160,7 +165,8 @@ func launchApp(decodedURL: String) {
        // Check if the metadataObjects array is not nil and it contains at least one object.
        if metadataObjects.count == 0 {
            qrCodeFrameView?.frame = CGRect.zero
-           messageLabel.text = "No QR code is detected"
+        print("No Barcode is detected")
+//           messageLabel.text = "No QR code is detected"
            return
        }
        
@@ -175,7 +181,7 @@ func launchApp(decodedURL: String) {
            
            if metadataObj.stringValue != nil {
                launchApp(decodedURL: metadataObj.stringValue!)
-               messageLabel.text = metadataObj.stringValue
+//               messageLabel.text = metadataObj.stringValue
            }
        }
     }
