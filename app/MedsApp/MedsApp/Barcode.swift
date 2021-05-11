@@ -12,9 +12,12 @@ class Barcode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     @IBOutlet var topbar: UIView!
     
-    var captureSession = AVCaptureSession()
+    let pickerController = UIImagePickerController()// 직접 카메라로 상품을 찍을 때 사용하는 변수.
+    var imageView : UIImage? //카메라로 찍은 상품 사진.
+    
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
+    
     
     private let supportedCodeTypes = [AVMetadataObject.ObjectType.upce,
                                           AVMetadataObject.ObjectType.code39,
@@ -32,6 +35,12 @@ class Barcode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
 override func viewDidLoad() {
     super.viewDidLoad()
+    var captureSession = AVCaptureSession()
+    
+    
+    pickerController.sourceType = UIImagePickerController.SourceType.camera
+    pickerController.delegate = self
+    
     
 guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
            print("Failed to get the camera device")
@@ -51,7 +60,7 @@ guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
            
            // Set delegate and use the default dispatch queue to execute the call back
            captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-//                   captureMetadataOutput.metadataObjectTypes = supportedCodeTypes
+
            captureMetadataOutput.metadataObjectTypes = supportedCodeTypes
         
         
@@ -166,7 +175,7 @@ func launchApp(decodedURL: String) {
        if metadataObjects.count == 0 {
            qrCodeFrameView?.frame = CGRect.zero
         print("No Barcode is detected")
-//           messageLabel.text = "No QR code is detected"
+
            return
        }
        
@@ -185,5 +194,43 @@ func launchApp(decodedURL: String) {
            }
        }
     }
+    
+    
+    @IBAction func takePicture(_ sender: Any) {
+    //직접 입력 버튼을 눌렀을 떄 실행하는 함수.
+        present(pickerController, animated: true, completion: nil)
+    }
        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let saveProduct = segue.destination as? saveProduct else { return }
+        
+        if let imageView = imageView
+        {
+            saveProduct.tempImage = imageView
+        }
+        
+        
+    }
+    
+    
+}
+
+
+extension Barcode : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        
+        
+        
+        imageView = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+
+        performSegue(withIdentifier: "storeProduct", sender: self)
+        
+//        productImage.image = info[UIImagePickerController.InfoKey.originalImage]
+//    as? UIImage
+        
+    }
+
+    
 }
