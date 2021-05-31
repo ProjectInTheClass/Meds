@@ -80,7 +80,6 @@ class MyIngredient: UIViewController, UITableViewDataSource, UITableViewDelegate
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
         print(ProductData.name)
         tableView.reloadData()
     }
