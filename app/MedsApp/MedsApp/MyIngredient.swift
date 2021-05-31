@@ -72,7 +72,7 @@ class MyIngredient: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         
         
-        notification()
+//        notification()
         
     }
     
