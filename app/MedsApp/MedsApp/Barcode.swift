@@ -12,6 +12,7 @@ class Barcode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     @IBOutlet var topbar: UIView!
     
+    @IBOutlet weak var bottombar: UIView!
     let pickerController = UIImagePickerController()// 직접 카메라로 상품을 찍을 때 사용하는 변수.
     var imageView : UIImage? //카메라로 찍은 상품 사진.
     
@@ -85,7 +86,7 @@ guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
         topbar.layer.borderColor = UIColor.black.cgColor
         topbar.layer.borderWidth = 2
         view.bringSubviewToFront( topbar)
-    
+    view.bringSubviewToFront( bottombar)
 //        topbar.backgroundColor = UIColor(
         // Initialize QR Code Frame to highlight the QR code
         qrCodeFrameView = UIView()
