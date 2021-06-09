@@ -24,6 +24,10 @@
 		4D7671D8265B9BFB00BEADD9 /* UserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7671D7265B9BFB00BEADD9 /* UserHealthProfile.swift */; };
 		4D7671DA265B9C5300BEADD9 /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7671D9265B9C5300BEADD9 /* ProfileDataStore.swift */; };
 		4D7671DC265BA07A00BEADD9 /* HealthkitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7671DB265BA07A00BEADD9 /* HealthkitSetupAssistant.swift */; };
+		4DB8B5D4267087FB00791D16 /* JalnanOTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DB8B5D3267087F800791D16 /* JalnanOTF.otf */; };
+		4DB8B5D726708F3600791D16 /* BMJua-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DB8B5D626708ECE00791D16 /* BMJua-Regular.otf */; };
+		4DB8B5D826708F3A00791D16 /* BMHanna11yrs-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DB8B5D526708E4100791D16 /* BMHanna11yrs-Regular.otf */; };
+		4DB8B5DA2670913C00791D16 /* BMHannaAir-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DB8B5D92670913C00791D16 /* BMHannaAir-Regular.otf */; };
 		4DBCB97A2649421500FEF62B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBCB9792649421500FEF62B /* HealthKit.framework */; };
 		4DC6F97E2665408700718B17 /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6F97D2665408700718B17 /* ProductData.swift */; };
 		4DC6F980266540D500718B17 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6F97F266540D500718B17 /* CustomTableViewCell.swift */; };
@@ -72,6 +76,10 @@
 		4D7671D7265B9BFB00BEADD9 /* UserHealthProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHealthProfile.swift; sourceTree = "<group>"; };
 		4D7671D9265B9C5300BEADD9 /* ProfileDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataStore.swift; sourceTree = "<group>"; };
 		4D7671DB265BA07A00BEADD9 /* HealthkitSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthkitSetupAssistant.swift; sourceTree = "<group>"; };
+		4DB8B5D3267087F800791D16 /* JalnanOTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JalnanOTF.otf; sourceTree = "<group>"; };
+		4DB8B5D526708E4100791D16 /* BMHanna11yrs-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BMHanna11yrs-Regular.otf"; sourceTree = "<group>"; };
+		4DB8B5D626708ECE00791D16 /* BMJua-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BMJua-Regular.otf"; sourceTree = "<group>"; };
+		4DB8B5D92670913C00791D16 /* BMHannaAir-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BMHannaAir-Regular.otf"; sourceTree = "<group>"; };
 		4DBCB9772649421500FEF62B /* MedsApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MedsApp.entitlements; sourceTree = "<group>"; };
 		4DBCB9792649421500FEF62B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		4DC6F97D2665408700718B17 /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
@@ -130,7 +138,11 @@
 		4D122439262BF6B3000C3C10 /* MedsApp */ = {
 			isa = PBXGroup;
 			children = (
+				4DB8B5D626708ECE00791D16 /* BMJua-Regular.otf */,
+				4DB8B5D3267087F800791D16 /* JalnanOTF.otf */,
+				4DB8B5D526708E4100791D16 /* BMHanna11yrs-Regular.otf */,
 				4DC6F983266551B700718B17 /* Medsrefrigerator1 복사본.jpg */,
+				4DB8B5D92670913C00791D16 /* BMHannaAir-Regular.otf */,
 				4DBCB9772649421500FEF62B /* MedsApp.entitlements */,
 				4D12243A262BF6B3000C3C10 /* AppDelegate.swift */,
 				4D12243C262BF6B3000C3C10 /* SceneDelegate.swift */,
@@ -318,7 +330,11 @@
 			files = (
 				4DC6F984266551B700718B17 /* Medsrefrigerator1 복사본.jpg in Resources */,
 				4D122447262BF6B6000C3C10 /* LaunchScreen.storyboard in Resources */,
+				4DB8B5D826708F3A00791D16 /* BMHanna11yrs-Regular.otf in Resources */,
+				4DB8B5D4267087FB00791D16 /* JalnanOTF.otf in Resources */,
 				4D122444262BF6B6000C3C10 /* Assets.xcassets in Resources */,
+				4DB8B5DA2670913C00791D16 /* BMHannaAir-Regular.otf in Resources */,
+				4DB8B5D726708F3600791D16 /* BMJua-Regular.otf in Resources */,
 				4D122442262BF6B3000C3C10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

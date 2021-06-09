@@ -21,6 +21,8 @@ class ContainerSettingViewController: UIViewController {
             profileImage.layer.borderColor = UIColor.black.cgColor
             profileImage.layer.cornerRadius = profileImage.frame.height/2
             profileImage.clipsToBounds = true
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -28,6 +30,15 @@ class ContainerSettingViewController: UIViewController {
     {
         showImagePickerControllerActionSheet()
     }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+
+          self.view.endEditing(true)
+
+    }
+
+
 
 }
 
@@ -70,6 +81,7 @@ extension ContainerSettingViewController: UIImagePickerControllerDelegate,UINavi
         imagePickerController.sourceType = .photoLibrary
         present(imagePickerController, animated: true, completion: nil)
     }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
