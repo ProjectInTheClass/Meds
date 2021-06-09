@@ -109,5 +109,25 @@ class ModifyViewController: UIViewController {
     }
     
     
+    @IBAction func recommendMenu(_ sender: Any) {
+        let urlStr : String
+        if let name = pname
+        {
+            urlStr = "https://m.youtube.com/results?sp=mAEA&search_query=\(name)요리"
+        }
+        else {
+            urlStr = "https://m.youtube.com/results?sp=mAEA&search_query=요리"
+        }
+        
+        if let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let myURL = URL(string: encoded) {
+
+            UIApplication.shared.open( myURL, options: [:], completionHandler: nil)
+
+
+        }
+
+        
+
+        }
     
 }
