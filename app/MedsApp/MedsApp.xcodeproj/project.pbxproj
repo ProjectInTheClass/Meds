@@ -134,20 +134,15 @@
 				4DBCB9772649421500FEF62B /* MedsApp.entitlements */,
 				4D12243A262BF6B3000C3C10 /* AppDelegate.swift */,
 				4D12243C262BF6B3000C3C10 /* SceneDelegate.swift */,
-				4D32A503265F9FEF00724EFE /* HealthKit */,
-				4D12243E262BF6B3000C3C10 /* MyIngredientController.swift */,
 				4D122440262BF6B3000C3C10 /* Main.storyboard */,
-				4DC6F97D2665408700718B17 /* ProductData.swift */,
-				4D122483262C08BF000C3C10 /* MyIngredient.swift */,
-				4DC6F97F266540D500718B17 /* CustomTableViewCell.swift */,
-				4D122470262BFC68000C3C10 /* Barcode.swift */,
 				4DF61223263A825000FD844A /* ViewController.swift */,
-				4D7671D3265B900A00BEADD9 /* SettingTableViewController.swift */,
-				4D181F7F264533ED00294A15 /* saveProduct.swift */,
+				4D32A503265F9FEF00724EFE /* HealthKit */,
+				4D7B219D266C8A8600D4938F /* ingredient */,
+				4D7B219E266C8D6800D4938F /* barcode */,
+				4D7B219F266C8D8C00D4938F /* setting */,
 				4D122443262BF6B6000C3C10 /* Assets.xcassets */,
 				4D122445262BF6B6000C3C10 /* LaunchScreen.storyboard */,
 				4D122448262BF6B6000C3C10 /* Info.plist */,
-				4D32A504265FADD400724EFE /* ContainerSettingViewController.swift */,
 			);
 			path = MedsApp;
 			sourceTree = "<group>";
@@ -179,6 +174,35 @@
 				4D7671D7265B9BFB00BEADD9 /* UserHealthProfile.swift */,
 			);
 			path = HealthKit;
+			sourceTree = "<group>";
+		};
+		4D7B219D266C8A8600D4938F /* ingredient */ = {
+			isa = PBXGroup;
+			children = (
+				4D12243E262BF6B3000C3C10 /* MyIngredientController.swift */,
+				4DC6F97D2665408700718B17 /* ProductData.swift */,
+				4D122483262C08BF000C3C10 /* MyIngredient.swift */,
+				4DC6F97F266540D500718B17 /* CustomTableViewCell.swift */,
+			);
+			path = ingredient;
+			sourceTree = "<group>";
+		};
+		4D7B219E266C8D6800D4938F /* barcode */ = {
+			isa = PBXGroup;
+			children = (
+				4D122470262BFC68000C3C10 /* Barcode.swift */,
+				4D181F7F264533ED00294A15 /* saveProduct.swift */,
+			);
+			path = barcode;
+			sourceTree = "<group>";
+		};
+		4D7B219F266C8D8C00D4938F /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				4D32A504265FADD400724EFE /* ContainerSettingViewController.swift */,
+				4D7671D3265B900A00BEADD9 /* SettingTableViewController.swift */,
+			);
+			path = setting;
 			sourceTree = "<group>";
 		};
 		4DBCB9782649421500FEF62B /* Frameworks */ = {
