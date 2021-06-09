@@ -33,7 +33,7 @@ class ProductData
         var ret = 0;
         let ty = year - 2021;
         
-        if (year%4==0){flag = 1;}
+        if (year % 4 == 0){flag = 1;}
         
         ret += dPerMonth[month]
         if(flag==1 && month>2){ret+=1}
@@ -43,7 +43,6 @@ class ProductData
         return ret
     }
             
-    
     
     static func saveImage(image: UIImage)->String{
         let imageData = image.pngData()! as NSData

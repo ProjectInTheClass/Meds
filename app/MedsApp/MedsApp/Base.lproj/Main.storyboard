@@ -540,7 +540,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pm0-5j-DhB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2632" y="603"/>
+            <point key="canvasLocation" x="2107" y="597"/>
         </scene>
         <!--내 재료-->
         <scene sceneID="JiL-mQ-tEA">
@@ -587,6 +587,7 @@
                                             <outlet property="IngredientImage" destination="yDF-Xi-W4z" id="Qcw-OB-dyN"/>
                                             <outlet property="ingredientDate" destination="Kv2-Cw-SBR" id="FrX-mz-fQ9"/>
                                             <outlet property="ingredientName" destination="0x8-BP-jwP" id="irw-XF-RfA"/>
+                                            <segue destination="HW1-kP-LG1" kind="showDetail" id="sDO-mF-Qz4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -643,6 +644,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTU-po-g7d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2278" y="1704"/>
+        </scene>
+        <!--Modify View Controller-->
+        <scene sceneID="zZM-UA-pfy">
+            <objects>
+                <viewController id="HW1-kP-LG1" customClass="ModifyViewController" customModule="MedsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6fz-0J-Skj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="eSe-K5-s0b">
+                                <rect key="frame" x="53" y="236" width="351" height="167"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQV-df-QaD">
+                                <rect key="frame" x="109" y="49" width="172" height="147"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vvj-p0-ZWT">
+                                <rect key="frame" x="53" y="250" width="284" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="내용" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RGa-lf-bKv">
+                                <rect key="frame" x="53" y="352" width="284" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awb-ix-ZUk">
+                                <rect key="frame" x="68" y="394" width="254" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <state key="normal" title="수정">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="HW1-kP-LG1" eventType="touchUpInside" id="b7r-2q-b6N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DmX-mn-Pdh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WOT-O6-xau"/>
+                    <connections>
+                        <outlet property="productDate" destination="eSe-K5-s0b" id="0Qo-MH-7sg"/>
+                        <outlet property="productImage" destination="TQV-df-QaD" id="Z6I-uw-PNb"/>
+                        <outlet property="productName" destination="Vvj-p0-ZWT" id="VOk-dz-wPi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKL-1y-dnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3183" y="-190"/>
         </scene>
     </scenes>
     <resources>

@@ -87,7 +87,33 @@ class MyIngredient: UIViewController, UITableViewDataSource, UITableViewDelegate
         tableView.reloadData()
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let nextViewController = segue.destination as? ModifyViewController else{return}
+        let cell = sender as! CustomTableViewCell
+
+        let indexPath = tableView.indexPath(for: cell)
+        
+        
+        
+//        static var name = UserDefaults.standard.stringArray(forKey: "savedName") ?? [String]()
+//        static var date : [Int] = UserDefaults.standard.array(forKey: "savedDate")as? [Int] ?? [Int]()
+//
+//        static var sdate : [String] = UserDefaults.standard.stringArray(forKey: "savedSdate") ?? [String]()
+//
+//        static var imageNames : [String] = UserDefaults.standard.stringArray(forKey: "savedImageName") ?? [String]()
+//        static var images : [UIImage] = loadImages(imageNames: imageNames)
+        
+        let name = ProductData.name[indexPath!.row]
+        let image = ProductData.images[indexPath!.row]
+        nextViewController.pname = name
+        nextViewController.pimage = image
+        
+        nextViewController.tableView = tableView
+        nextViewController.indexPath = indexPath
+        
+        
+    }
     /*
     // MARK: - Navigation
 
