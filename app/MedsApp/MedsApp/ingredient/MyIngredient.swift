@@ -71,7 +71,10 @@ class MyIngredient: UIViewController, UITableViewDataSource, UITableViewDelegate
         todayDate = ProductData.dayToInt(year: year, month: month, day: day)
         todayTime = (1440-minute-(hour*60))*60
         
-        notification()
+        if(ProductData.name.count>0)
+        {
+            notification()
+        }
         
         while ProductData.images.count < ProductData.name.count{
             ProductData.images.append(UIImage())
