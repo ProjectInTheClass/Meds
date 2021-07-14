@@ -23,7 +23,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<string>To use barcode scanner we want to camera usage</string>
 	<key>NSHealthShareUsageDescription</key>
 	<string>some string value stating the reason</string>
 	<key>NSHealthUpdateUsageDescription</key>
