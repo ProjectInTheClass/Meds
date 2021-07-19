@@ -33,6 +33,7 @@
 		4DC6F97E2665408700718B17 /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6F97D2665408700718B17 /* ProductData.swift */; };
 		4DC6F980266540D500718B17 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6F97F266540D500718B17 /* CustomTableViewCell.swift */; };
 		4DC6F984266551B700718B17 /* Medsrefrigerator1 복사본.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F983266551B700718B17 /* Medsrefrigerator1 복사본.jpg */; };
+		4DF3FEB526A5C74D00996F8D /* ModifyBarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3FEB426A5C74D00996F8D /* ModifyBarcodeViewController.swift */; };
 		4DF61224263A825000FD844A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF61223263A825000FD844A /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		4DC6F97D2665408700718B17 /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
 		4DC6F97F266540D500718B17 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		4DC6F983266551B700718B17 /* Medsrefrigerator1 복사본.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Medsrefrigerator1 복사본.jpg"; sourceTree = "<group>"; };
+		4DF3FEB426A5C74D00996F8D /* ModifyBarcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyBarcodeViewController.swift; sourceTree = "<group>"; };
 		4DF61223263A825000FD844A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,6 +209,7 @@
 			children = (
 				4D122470262BFC68000C3C10 /* Barcode.swift */,
 				4D181F7F264533ED00294A15 /* saveProduct.swift */,
+				4DF3FEB426A5C74D00996F8D /* ModifyBarcodeViewController.swift */,
 			);
 			path = barcode;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			files = (
 				4D7671D4265B900A00BEADD9 /* SettingTableViewController.swift in Sources */,
 				4DC6F97E2665408700718B17 /* ProductData.swift in Sources */,
+				4DF3FEB526A5C74D00996F8D /* ModifyBarcodeViewController.swift in Sources */,
 				4D7671DC265BA07A00BEADD9 /* HealthkitSetupAssistant.swift in Sources */,
 				4DF61224263A825000FD844A /* ViewController.swift in Sources */,
 				4D12243F262BF6B3000C3C10 /* MyIngredientController.swift in Sources */,

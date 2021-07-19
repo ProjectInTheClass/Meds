@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wt5-io-FhF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713" y="597"/>
+            <point key="canvasLocation" x="5793" y="1277"/>
         </scene>
         <!--설정-->
         <scene sceneID="qME-nY-nj8">
@@ -102,9 +102,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="f5Q-8A-6ca" kind="show" id="HRV-3R-Smu"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -238,13 +235,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="BqF-iP-oZV" kind="relationship" relationship="viewControllers" id="Dup-6j-8ov"/>
-                        <segue destination="FoV-Yd-yzu" kind="relationship" relationship="viewControllers" id="hmj-W1-DSV"/>
+                        <segue destination="M46-75-039" kind="relationship" relationship="viewControllers" id="eU3-iI-lOk"/>
                         <segue destination="sgx-1A-dbZ" kind="relationship" relationship="viewControllers" id="J0g-qx-mH1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IOh-HR-r7o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1365" y="597"/>
+            <point key="canvasLocation" x="-1561" y="433"/>
         </scene>
         <!--내 재료-->
         <scene sceneID="DsL-mk-ie4">
@@ -273,7 +270,7 @@
             <objects>
                 <tableViewController title="Profile &amp; BMI" id="f5Q-8A-6ca" customClass="ProfileViewController" customModule="MedsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="9gp-47-uOz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="459"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -485,7 +482,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFg-O8-H8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2180" y="1269"/>
+            <point key="canvasLocation" x="3248" y="1575"/>
         </scene>
         <!--Save Product-->
         <scene sceneID="NPl-4F-T2Q">
@@ -540,7 +537,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pm0-5j-DhB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2107" y="597"/>
+            <point key="canvasLocation" x="3819" y="639"/>
         </scene>
         <!--내 재료-->
         <scene sceneID="JiL-mQ-tEA">
@@ -710,7 +707,29 @@
             </objects>
             <point key="canvasLocation" x="3182.608695652174" y="-190.17857142857142"/>
         </scene>
+        <!--바코드-->
+        <scene sceneID="HzG-sT-JXu">
+            <objects>
+                <viewController id="M46-75-039" customClass="ModifyBarcodeViewController" customModule="MedsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WgO-ea-nVr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="N5u-k3-u6N"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="바코드" image="camera" catalog="system" id="aCx-Sj-7hi"/>
+                    <connections>
+                        <segue destination="Hpv-hN-RPT" kind="presentation" identifier="storeProduct" id="egr-Rt-reG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jC-M4-J8Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="651" y="516"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="egr-Rt-reG"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="564" height="564"/>
         <image name="camera" catalog="system" width="128" height="94"/>

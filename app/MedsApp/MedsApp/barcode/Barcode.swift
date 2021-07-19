@@ -208,11 +208,7 @@ func launchApp(decodedURL: String) {
         {
             saveProduct.tempImage = imageView
         }
-        
-        
     }
-    
-    
 }
 
 
@@ -221,16 +217,8 @@ extension Barcode : UIImagePickerControllerDelegate, UINavigationControllerDeleg
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         
-        
-        
         imageView = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
 
         performSegue(withIdentifier: "storeProduct", sender: self)
-        
-//        productImage.image = info[UIImagePickerController.InfoKey.originalImage]
-//    as? UIImage
-        
     }
-
-    
 }

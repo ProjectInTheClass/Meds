@@ -24,7 +24,6 @@ class saveProduct: UIViewController {
     
     func takePicture()
     {
-        
         present(pickerController, animated: true, completion: nil)
     }
     
